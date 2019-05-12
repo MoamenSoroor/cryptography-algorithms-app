@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.FlowPane?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane fx:id="root" prefHeight="450.0" prefWidth="673.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.111" fx:controller="app.utils.UI.UtilsViewController">
+   <children>
+      <TabPane prefHeight="200.0" prefWidth="200.0" tabClosingPolicy="UNAVAILABLE" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <tabs>
+          <Tab fx:id="tabMatcher" text="Binary Matcher">
+            <content>
+                  <VBox prefHeight="232.0" prefWidth="250.0" spacing="7.0">
+                     <children>
+                        <HBox alignment="CENTER" style="-fx-background-color: #c2c8d1; -fx-background-radius: 8pt;" VBox.vgrow="NEVER">
+                           <children>
+                              <Label text="Binary Matcher" HBox.hgrow="NEVER">
+                                 <font>
+                                    <Font name="System Bold" size="19.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </HBox>
+                        <TextArea fx:id="boxText1" prefHeight="240.0" prefWidth="590.0" promptText="Enter text1" wrapText="true" VBox.vgrow="SOMETIMES">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </TextArea>
+                        <TextArea fx:id="boxText2" layoutX="15.0" layoutY="87.0" prefHeight="240.0" prefWidth="590.0" promptText="Enter text2" wrapText="true" VBox.vgrow="SOMETIMES">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </TextArea>
+                        <FlowPane alignment="TOP_CENTER" hgap="6.0" rowValignment="TOP" vgap="4.0" VBox.vgrow="SOMETIMES">
+                           <children>
+                              <Button fx:id="buttonMatch" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefWidth="80.0" text="Match">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </Button>
+                           </children>
+                           <VBox.margin>
+                              <Insets />
+                           </VBox.margin>
+                        </FlowPane>
+                        <TextArea fx:id="boxResult" prefHeight="280.0" prefWidth="590.0" promptText="Result here" wrapText="true" VBox.vgrow="SOMETIMES">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </TextArea>
+                     </children>
+                     <padding>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </padding>
+                  </VBox>
+            </content>
+          </Tab>
+            <Tab fx:id="tabFormatter" text="Binary Formatter">
+               <content>
+                  <VBox prefHeight="232.0" prefWidth="250.0" spacing="7.0">
+                     <children>
+                        <HBox alignment="CENTER" style="-fx-background-color: #c2c8d1; -fx-background-radius: 8pt;" VBox.vgrow="NEVER">
+                           <children>
+                              <Label text="Binary Formatter" HBox.hgrow="NEVER">
+                                 <font>
+                                    <Font name="System Bold" size="19.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </HBox>
+                        <TextArea fx:id="boxText11" prefHeight="92.0" prefWidth="590.0" promptText="Enter text1" wrapText="true">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </TextArea>
+                        <TextArea fx:id="boxResult1" prefHeight="114.0" prefWidth="590.0" promptText="Result here" wrapText="true">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </TextArea>
+                        <FlowPane alignment="TOP_CENTER" hgap="6.0" prefHeight="0.0" prefWidth="590.0" rowValignment="TOP" vgap="4.0">
+                           <children>
+                              <Button fx:id="buttonMatch11" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="31.0" prefWidth="87.0" text="Format">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </Button>
+                              <Button fx:id="buttonMatch1" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="31.0" prefWidth="90.0" text="Unformat">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </Button>
+                           </children>
+                           <VBox.margin>
+                              <Insets />
+                           </VBox.margin>
+                        </FlowPane>
+                     </children>
+                     <padding>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </padding>
+                  </VBox>
+               </content>
+            </Tab>
+            <Tab fx:id="tabFormatOptions" text="Format Options">
+               <content>
+                  <VBox fx:id="boxFormatOptions" prefHeight="232.0" prefWidth="250.0" spacing="7.0">
+                     <children>
+                        <HBox alignment="CENTER" style="-fx-background-color: #c2c8d1; -fx-background-radius: 8pt;" VBox.vgrow="NEVER">
+                           <children>
+                              <Label text="Format Options" HBox.hgrow="NEVER">
+                                 <font>
+                                    <Font name="System Bold" size="19.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </HBox>
+                        <FlowPane alignment="TOP_CENTER" hgap="6.0" prefHeight="0.0" prefWidth="590.0" rowValignment="TOP" vgap="4.0">
+                           <VBox.margin>
+                              <Insets />
+                           </VBox.margin>
+                        </FlowPane>
+                        <GridPane prefHeight="127.0" prefWidth="663.0">
+                           <columnConstraints>
+                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="288.0" minWidth="10.0" prefWidth="176.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="487.0" minWidth="10.0" prefWidth="487.0" />
+                           </columnConstraints>
+                           <rowConstraints>
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                           </rowConstraints>
+                           <children>
+                              <Label text="Format Options: ">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Label>
+                              <ComboBox fx:id="selectSeparator" prefHeight="25.0" prefWidth="76.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                              <ComboBox fx:id="selectBlockLength" prefHeight="25.0" prefWidth="76.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                              <Label text="type of separator: " GridPane.rowIndex="1">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Label>
+                              <Label text="One Block Length:" GridPane.rowIndex="2">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Label>
+                              <FlowPane hgap="4.0" rowValignment="TOP" vgap="4.0" GridPane.columnIndex="1">
+                                 <children>
+                                    <RadioButton fx:id="radioBits4_" mnemonicParsing="false" text="4_ Bits">
+                                       <font>
+                                          <Font name="System Bold" size="14.0" />
+                                       </font>
+                                       <toggleGroup>
+                                          <ToggleGroup fx:id="fomratGroup" />
+                                       </toggleGroup>
+                                    </RadioButton>
+                                    <RadioButton fx:id="radioBits6_" mnemonicParsing="false" text="6_ Bits" toggleGroup="$fomratGroup">
+                                       <font>
+                                          <Font name="System Bold" size="14.0" />
+                                       </font>
+                                    </RadioButton>
+                                    <RadioButton fx:id="radioBits8_" mnemonicParsing="false" text="8_ Bits" toggleGroup="$fomratGroup">
+                                       <font>
+                                          <Font name="System Bold" size="14.0" />
+                                       </font>
+                                    </RadioButton>
+                                    <RadioButton fx:id="radioBits16_" mnemonicParsing="false" text="16_ Bits" toggleGroup="$fomratGroup">
+                                       <font>
+                                          <Font name="System Bold" size="14.0" />
+                                       </font>
+                                    </RadioButton>
+                                    <RadioButton fx:id="radioBits4s" mnemonicParsing="false" text="4s Bits" toggleGroup="$fomratGroup">
+                                       <font>
+                                          <Font name="System Bold" size="14.0" />
+                                       </font>
+                                    </RadioButton>
+                                    <RadioButton fx:id="radioBits6s" mnemonicParsing="false" text="6s Bits" toggleGroup="$fomratGroup">
+                                       <font>
+                                          <Font name="System Bold" size="14.0" />
+                                       </font>
+                                    </RadioButton>
+                                    <RadioButton fx:id="radioBits8s" layoutX="13.0" layoutY="37.0" mnemonicParsing="false" text="8s Bits" toggleGroup="$fomratGroup">
+                                       <font>
+                                          <Font name="System Bold" size="14.0" />
+                                       </font>
+                                    </RadioButton>
+                                    <RadioButton fx:id="radioBits16s" layoutX="85.0" layoutY="37.0" mnemonicParsing="false" text="16s Bits" toggleGroup="$fomratGroup">
+                                       <font>
+                                          <Font name="System Bold" size="14.0" />
+                                       </font>
+                                    </RadioButton>
+                                    <RadioButton fx:id="radioBitsOther" layoutX="157.0" layoutY="37.0" mnemonicParsing="false" text="Other" toggleGroup="$fomratGroup">
+                                       <font>
+                                          <Font name="System Bold" size="14.0" />
+                                       </font>
+                                    </RadioButton>
+                                 </children>
+                                 <padding>
+                                    <Insets bottom="3.0" left="3.0" right="3.0" top="3.0" />
+                                 </padding>
+                              </FlowPane>
+                           </children>
+                           <padding>
+                              <Insets left="4.0" right="4.0" />
+                           </padding>
+                        </GridPane>
+                        <Label text=" Sample: ">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <TextArea fx:id="boxformat" prefHeight="92.0" prefWidth="590.0" promptText="Sample of Format Options" wrapText="true">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </TextArea>
+                     </children>
+                     <padding>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </padding>
+                  </VBox>
+               </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+   </children>
+</AnchorPane>

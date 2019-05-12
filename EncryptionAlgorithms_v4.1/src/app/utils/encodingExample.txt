@@ -1,0 +1,38 @@
+	// 0 - 9 ------- numbers
+	// 10 - 35 ----- small charcters
+	// 36 - 61 ----- capital characters
+	// 62 whitespace
+	// 63 tab \t
+	// 64 newLine \r \n \u2028 \u2029 \u0085
+	// 65   plus char +
+	// 66    minus char -
+	// 67    mul char *
+	// 68    div char /
+	// 69    mod char %
+	// 70    dot char .
+	// 71    comma char ,
+	// 72    !
+	// 73    @
+	// 74    #
+	// 75    ^
+	// 76    &
+	// 77    (
+	// 78    )
+	// 79    [
+	// 80    ]
+	// 81    {
+	// 82    }
+	// 83    _
+	// 84    =
+	// 85    ;
+	// 86    :
+	// 87    '
+	// 88    "
+	// 89    `
+	// 90    ~
+	// 91    \
+	// 92    /
+	// 93    |
+	// 94    ?
+
+	// total number of characters = 95
